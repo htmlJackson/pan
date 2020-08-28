@@ -1,0 +1,36 @@
+.slider {
+  padding-top: 85px;
+  padding-bottom: 80px;
+  @media (max-width: $tablet) {
+    padding-top: 70px;
+    padding-bottom: 15px;
+  }
+  @media (max-width: $mob) {
+    padding-top: 40px;
+  }
+}
+
+.slider__container {
+  width: 1310px;
+  padding-right: 0;
+
+  @media (max-width: $desk-sm) {
+    width: 1070px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 624px;
+    padding-right: 10px;
+  }
+
+  @media (max-width: $mob) {
+    width: 100%;
+  }
+
+}
+
+.slider__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  text-align: center;
+}

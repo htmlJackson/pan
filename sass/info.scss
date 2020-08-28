@@ -1,0 +1,35 @@
+.info {
+  padding-top: 95px;
+  padding-bottom: 115px;
+  @media (max-width: $desk-sm) {
+    padding-top: 50px;
+    padding-bottom: 90px;
+  }
+  @media (max-width: $tablet) {
+    padding-top: 95px;
+    padding-bottom: 75px;
+  }
+}
+
+.info__container {
+  display: flex;
+  @media (max-width: $mob) {
+    flex-direction: column;
+  }
+}
+
+.info__block:first-child {
+  margin-right: 155px;
+
+  @media (max-width: $desk-sm) {
+    margin-right: 120px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-right: 60px;
+  }
+  @media (max-width: $mob) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}

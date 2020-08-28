@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ПАН - Первое Агентство Недвижимости</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <img class="header__logo logo" src="img/svg/logo.svg" width="74" height="40" alt="Логотип ПАН">
+
+    <nav class="nav header__nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__anchor nav__sublist-trigger">
+            Пункт 1
+          </a>
+          <ul class="nav__sublist">
+            <li class="nav__sublist-item">
+              <a href="#" class="">Меню 1</a>
+              <span>Покупайте и продавайте</span>
+            </li>
+            <li class="nav__sublist-item">
+              <a href="#">Меню 2</a>
+              <span>Давайте подружимся</span>
+            </li>
+            <li class="nav__sublist-item">
+              <a href="#">Меню 1</a>
+              <span>Покупайте и продавайте</span>
+            </li>
+            <li class="nav__sublist-item">
+              <a href="#">Меню 2</a>
+              <span>Давайте подружимся</span>
+            </li>
+          </ul>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__anchor">Пункт 2</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__anchor">Пункт 3</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__anchor">Пункт 4</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__anchor">Пункт 5</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button type="button" class="btn header__btn">Кнопка</button>
+
+    <button class="header__nav-toggle toggle " aria-label="Переключение меню"></button>
+  </header>
+
+  <main class="main">
+    <section class="promo">
+      <div class="container promo__container">
+        <div class="promo__box">
+          <h1 class="promo__title h1">Недвижимость Санкт-Петербурга и&nbsp;Москвы</h1>
+          <form action="#" class="promo__form form" method="post">
+            <div class="form__box">
+              <label class="form__label">
+                Выбрать город
+                <select class="form__select form__elem" name="city">
+                  <option class="form__option" value="unselected">Выбрать город</option>
+                  <option class="form__option" value="Moscow">Москва</option>
+                  <option class="form__option" value="Saint-Petersburg">Санкт-Петербург</option>
+                  <option class="form__option" value="Vladivostok">Владивосток</option>
+                  <option class="form__option" value="Orenburg">Оренбург</option>
+                </select>
+              </label>
+
+              <label class="form__label">
+                Ваш e-mail
+                <input class="form__input form__elem" type="email" name="email" placeholder="info@mail.ru">
+              </label>
+
+            </div>
+
+            <button type="submit" class="btn form__submit">Кнопка действия</button>
+
+            <div class="form__agreement">
+              <div class="checkbox">
+                <input class="checkbox__input visually-hidden"
+                  type="checkbox"
+                  value="agreement"
+                  name="agreement-checkbox"
+                  id="checkbox-agreement">
+                <label class="checkbox__label" for="checkbox-agreement">
+                  <p>
+                    Отправляя нам данную форму, вы соглашаетесь с <a class="form__anchor" href="#">политикой конфиденциальности</a>
+                  </p>
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="slider">
+      <h2 class="h1 slider__title">Обычный слайдер</h2>
+
+      <div class="container slider__container">
+        <div class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <article class="slider__item card">
+                  <span class="card__ratio card__ratio--3">3 stars</span>
+                  <img class="card__image" src="img/slide-1.jpg" alt="Фото 1">
+                </article>
+              </li>
+              <li class="splide__slide">
+                <article class="slider__item card">
+                  <span class="card__ratio card__ratio--1">1 star</span>
+                  <img class="card__image" src="img/slide-2.jpg" alt="Фото 2">
+                </article>
+              </li>
+              <li class="splide__slide">
+                <article class="slider__item card">
+                  <span class="card__ratio card__ratio--4">4 stars</span>
+                  <img class="card__image" src="img/slide-1.jpg" alt="Фото 3">
+                </article>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="info">
+      <div class="container info__container">
+        <div class="info__block progress">
+          <div class="progress__bar">
+            <span class="progress__filler">5%</span>
+          </div>
+          <div class="progress__descr">
+            <button class="btn progress__btn" type="button">+25%</button>
+            <p>
+              При нажатии на кнопку прогрессбар заполняется на столько процентов,
+              сколько указано на кнопке
+            </p>
+          </div>
+        </div>
+
+        <div class="info__block dropdown">
+          <p class="dropdown__text">
+            Большинство онкологических пациентов испытывают страх перед
+            неизвестностью того, что их ожидает в процессе лечения рака.
+          </p>
+          <button class="dropdown__showmore-btn">Подробнее</button>
+
+          <p class="dropdown__text dropdown__text--hidden">
+            Повседневная практика показывает, что постоянное
+            информационно-пропагандистское обеспечение нашей деятельности
+            требуют определения и уточнения существенных финансовых
+            и административных условий. Повседневная практика показывает,
+            что начало повседневной работы по формированию позиции играет
+            важную роль в формировании форм развития.
+            С другой стороны постоянный количественный рост и сфера нашей
+            активности требуют определения и уточнения форм развития.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="map">
+      <div class="container">
+        <img class="map__placeholder" src="img/map.png" alt="Карта">
+        <div class="map__block">
+          <h4 class="map__title">Наш адрес</h4>
+          <p class="map__info">
+            Санкт-Петербург,<br>
+            Владимирский проспект, 23,
+            лит. А, офис 701
+          </p>
+
+          <a href="#" class="anchor map__anchor">Схема проезда</a>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="advantages">
+      <div class="advantages__container container">
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <b class="h2">3, 000</b>
+            <span>Агентств</span>
+          </li>
+          <li class="advantages__item">
+            <b class="h2">10, 000</b>
+            <span>Партнеров</span>
+          </li>
+          <li class="advantages__item">
+            <b class="h2">80, 000</b>
+            <span>Квартир в базе</span>
+          </li>
+          <li class="advantages__item">
+            <b class="h2">100+</b>
+            <span>Застройщиков</span>
+          </li>
+          <li class="advantages__item">
+            <b class="h2">200</b>
+            <span>Сотрудников</span>
+          </li>
+        </ul>
+
+        <button class="up-btn" type="button">Наверх</button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__container container">
+      <p class="footer__adress">
+        Санкт-Петербург, Владимирский пр., д. 3 лит. А, офис 701
+      </p>
+
+      <a href="tel:+78124456809" class="footer__phone h3">+7 (812) 445-68-09</a>
+
+      <a href="#" class="footer__writeus anchor">Напишите нам</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

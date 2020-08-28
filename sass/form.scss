@@ -1,0 +1,149 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  color: $black-dark;
+}
+
+.form__box {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+  }
+}
+
+.form__elem {
+  width: 345px;
+  max-width: 100%;
+  height: 60px;
+  padding: 0 25px;
+  margin-top: 10px;
+  background-color: transparent;
+  color: $white;
+  border: 1px solid;
+  @include border-opacity($gray-light, 0.4);
+  border-radius: 4px;
+
+  @media (max-width: $tablet) {
+    background-color: $black-dark;
+  }
+
+  @media (max-width: $mob) {
+    width: 100%;
+  }
+
+}
+
+.form__select {
+  position: relative;
+  appearance: none;
+  background-image: url(../img/svg/shevron.svg);
+  background-repeat: no-repeat;
+  background-position: 94% center;
+  background-size: 10px 6px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.form__option {
+  background: $black-dark;
+}
+
+
+.form__input {
+
+  &::placeholder {
+    color: $white;
+    transition: all 0.3s;
+  }
+
+  &:focus {
+    outline: none;
+    &::placeholder {
+      color: $gray-light;
+    }
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  &:disabled {
+    color: $gray-light;
+    &::placeholder {
+      color: $gray-light;
+    }
+  }
+}
+
+
+.form__label {
+  color: $gray-light;
+  @media (max-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+
+    &:first-child {
+      margin-bottom: 25px;
+    }
+  }
+
+   @media (max-width: $mob) {
+     color: $white;
+   }
+}
+
+
+.form__checkbox:checked ~ .form__label::after {
+  display: block;
+}
+
+.form__checkbox:disabled ~ .form__label,
+.form__checkbox:disabled ~ .form__label {
+  color: $gray-light;
+}
+
+.form__checkbox:disabled ~ .form__label::before,
+.form__checkbox:disabled ~ .form__label::after {
+  border-color: $gray-light;
+}
+
+.form__submit {
+  margin-top: 38px;
+  width: 220px;
+
+  &:disabled {
+    cursor: default;
+    background: $gray-light;
+    color: #e1e1e1;
+    opacity: 0.8;
+    &:hover {
+      background: $gray-light;
+      color: #e1e1e1;
+      opacity: 0.8;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    min-height: 60px;
+    align-items: center;
+  }
+
+  @media (max-width: $mob) {
+    width: 100%;
+    min-height: 70px;
+  }
+}
+
+.form__agreement {
+  margin-top: 38px;
+}

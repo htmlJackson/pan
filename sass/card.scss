@@ -1,0 +1,80 @@
+.card {
+  position: relative;
+  border-radius: 5px;
+}
+
+.card__image {
+  max-height: 340px;
+
+  @media (max-width: $desk-sm) {
+    max-height: 280px;
+  }
+
+  @media (max-width: $tablet) {
+    max-height: 168px;
+  }
+
+  @media (max-width: $mob) {
+    max-height: 340px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.card__ratio {
+  position: absolute;
+  left: 40px;
+  bottom: 27px;
+  width: 140px;
+  height: 20px;
+  font-size: 0;
+  background-repeat: no-repeat;
+  background-image: url('../img/svg/star.svg'),
+                    url('../img/svg/star.svg'),
+                    url('../img/svg/star.svg'),
+                    url('../img/svg/star.svg'),
+                    url('../img/svg/star.svg');
+  background-position: 0 0, 30px 0, 60px 0, 90px 0, 120px 0;
+}
+
+.card__ratio--1 {
+  background-image: url('../img/svg/star-red.svg'),
+                    url('../img/svg/star.svg'),
+                    url('../img/svg/star.svg'),
+                    url('../img/svg/star.svg'),
+                    url('../img/svg/star.svg');
+}
+
+.card__ratio--2 {
+  background-image: url('../img/svg/star-red.svg'),
+                    url('../img/svg/star-red.svg'),
+                    url('../img/svg/star.svg'),
+                    url('../img/svg/star.svg'),
+                    url('../img/svg/star.svg');
+}
+
+.card__ratio--3 {
+  background-image: url('../img/svg/star-red.svg'),
+                    url('../img/svg/star-red.svg'),
+                    url('../img/svg/star-red.svg'),
+                    url('../img/svg/star.svg'),
+                    url('../img/svg/star.svg');
+}
+
+
+.card__ratio--4 {
+  background-image: url('../img/svg/star-red.svg'),
+                    url('../img/svg/star-red.svg'),
+                    url('../img/svg/star-red.svg'),
+                    url('../img/svg/star-red.svg'),
+                    url('../img/svg/star.svg');
+}
+
+
+.card__ratio--5 {
+  background-image: url('../img/svg/star-red.svg'),
+                    url('../img/svg/star-red.svg'),
+                    url('../img/svg/star-red.svg'),
+                    url('../img/svg/star-red.svg'),
+                    url('../img/svg/star-red.svg');
+}

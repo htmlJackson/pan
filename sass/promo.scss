@@ -1,0 +1,47 @@
+.promo {
+  position: relative;
+  background: $black-dark;
+  color: $white;
+}
+
+.promo__container {
+   padding-top: 110px;
+   padding-bottom: 110px;
+   min-height: 800px;
+   background: $black-dark url(../img/illustration.png) no-repeat right center;
+
+   @media (max-width: $tablet) {
+    background-size: 310px;
+    background-position-y: 140px;
+   }
+
+   @media (max-width: $mob) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    min-height: 400px;
+    background: none;
+   }
+
+ }
+
+.promo__box {
+  width: 720px;
+  max-width: 100%;
+
+  @media (max-width: $tablet) {
+    width: 294px;
+  }
+
+  @media (max-width: $mob) {
+    width: 100%;
+  }
+}
+
+.promo__title {
+  width: 560px;
+  max-width: 100%;
+  @media (max-width: $mob) {
+    width: 100%;
+    text-align: center;
+  }
+}

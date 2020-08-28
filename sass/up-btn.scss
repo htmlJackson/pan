@@ -1,0 +1,32 @@
+.up-btn {
+  position: absolute;
+  bottom: 18px;
+  right: 10px;
+
+  display: flex;
+  align-items: center;
+
+  padding-right: 45px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+
+    width: 30px;
+    height: 30px;
+
+    background: $black-dark;
+    border-radius: 50%;
+  }
+
+  &::after {
+    @include shevron(6px, 6px, $white);
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    margin-top: -2px;
+
+    transform: rotate(225deg);
+  }
+}

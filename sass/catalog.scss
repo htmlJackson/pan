@@ -1,0 +1,35 @@
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  padding-bottom: 140px;
+
+  @media (max-width: $desk-sm) {
+    justify-content: space-around;
+  }
+
+  @media (max-width: $mob) {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    padding-bottom: 50px;
+  }
+}
+
+.catalog__item {
+  margin-top: 35px;
+
+  @media (max-width: $mob) {
+    margin-top: 20px;
+  }
+
+  &:nth-child(even) {
+    margin-left: 35px;
+
+    @media (max-width: $desk-sm) {
+      margin-left: 0;
+    }
+  }
+}

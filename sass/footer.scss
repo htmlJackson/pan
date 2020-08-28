@@ -1,0 +1,60 @@
+.footer {
+  position: relative;
+  display: flex;
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+
+  padding-top: 20px;
+  padding-bottom: 60px;
+
+  border-top: 1px solid;
+  @include border-opacity($gray-light, 0.2);
+
+  @media (max-width: $mob) {
+    flex-direction: column;
+  }
+}
+
+
+.footer__adress {
+  width: 286px;
+
+  @media (max-width: $tablet) {
+    width: 160px;
+  }
+
+  @media (max-width: $mob) {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.footer__phone {
+  margin-left: 210px;
+
+  @media (max-width: $desk-sm) {
+    margin-left: 105px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-left: 45px;
+  }
+
+  @media (max-width: $mob) {
+    margin-left: 0;
+  }
+}
+
+.footer__writeus {
+  margin-left: auto;
+
+  @media (max-width: $mob) {
+    margin-left: 0;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+}

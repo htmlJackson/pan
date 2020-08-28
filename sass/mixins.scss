@@ -1,0 +1,20 @@
+@mixin background-opacity($color, $opacity: 0.2) {
+    background: rgba($color, $opacity);
+}
+
+@mixin border-opacity($color, $opacity: 0.4) {
+    border-color: rgba($color, $opacity);
+}
+
+@mixin shevron($width: 6px, $height: 6px, $color: $black-dark) {
+  content: '';
+  display: flex;
+  margin-left: 10px;
+  width: $width;
+  height: $height;
+  border: 1px solid $color;
+  transform: rotate(45deg);
+  border-top: none;
+  border-left: none;
+  transition: all .3s;
+}

@@ -1,0 +1,50 @@
+.checkbox__label {
+  position: relative;
+  display: flex;
+
+  color: $gray-light;
+
+  a {
+    color: $red;
+  }
+
+  p {
+    width: 347px;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  &::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    margin-right: 16px;
+    background: transparent;
+    border: 1px solid;
+    @include border-opacity($gray-light, 0.4);
+    border-radius: 2px;
+
+    @media (max-width: $tablet) {
+      padding-right: 16px;
+    }
+  }
+}
+
+.checkbox__input:checked + .checkbox__label::before {
+  border: none;
+  background: $red;
+  @media (max-width: $tablet) {
+    padding-right: 18px;
+  }
+}
+
+.checkbox__input:checked + .checkbox__label::after {
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 18px;
+  height: 18px;
+  background: url('../img/svg/check-mark.svg') no-repeat;
+  background-size: 13px 10px;
+  background-position: center;
+}

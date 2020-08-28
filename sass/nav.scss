@@ -1,0 +1,161 @@
+.nav {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+
+  @media (max-width: $desk-sm) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.nav__anchor {
+  cursor: pointer;
+  padding: 10px 21px;
+  border-radius: 100px;
+  transition: all 0.3s;
+  &:hover {
+    @include background-opacity($gray-light, 0.2);
+  }
+  &:active {
+    background: $red;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 10px 17px;
+  }
+
+  @media (max-width: $mob) {
+    width: 100%;
+    padding: 20px;
+    border-radius: 0;
+  }
+}
+
+.nav__list {
+  display: flex;
+  @media (max-width: $mob) {
+    flex-direction: column;
+    background: $black-dark;
+  }
+}
+
+.nav__item {
+  display: flex;
+  position: relative;
+  margin-right: 60px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (max-width: $desk-sm) {
+    margin-right: 40px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-right: 0;
+  }
+
+
+  @media (max-width: $mob) {
+    margin-bottom: 25px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.nav__sublist {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 535px;
+
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 30px;
+  padding-right: 20px;
+  border-radius: 9px;
+
+  visibility: hidden;
+  opacity: 0;
+  background: $black-light;
+
+  &--shown {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @media (max-width: $mob) {
+    flex-direction: column;
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+.nav__sublist-item {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 35px;
+  background: url('../img/svg/menu-icon.svg') no-repeat 0 5px;
+
+  &:nth-child(4n+1),
+  &:nth-child(4n+2) {
+    padding-bottom: 20px;
+    border-bottom: 1px solid $gray-light;
+  }
+
+  &:nth-child(4n+3),
+  &:nth-child(4n+4) {
+    margin-top: 20px;
+  }
+
+  @media (max-width: $mob) {
+    width: 100%;
+    &:nth-child(n) {
+      padding: 20px 35px;
+      margin-top: 0;
+      border-bottom: 1px solid $gray-light;
+      background-position-y: 20px;
+    }
+  }
+}
+
+.nav__sublist-item span {
+  padding-top: 5px;
+  font-size: 14px;
+  line-height: 18px;
+  color: $gray-light;
+  font-weight: 400;
+}
+
+.nav__sublist-trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &::after {
+    @include shevron(8px, 8px, $white);
+    border-width: 2px;
+    margin-left: 15px;
+  }
+
+  &--active {
+    background: $red;
+    &:hover {
+      background: $red;
+    }
+    &::after {
+      margin-top: 4px;
+      transform: rotate(225deg);
+    }
+  }
+}
